@@ -1,82 +1,115 @@
-.stApp > header {   
-    background-color: #ffffff;   
-    color: #ffffff;   
-    padding: 2rem;   
-}   
+.stApp > header {  
+    background-color: #fcfcfc;  
+    color: #ffffff;  
+    padding: 2rem;  
+}  
   
-.stApp {   
-    background-color: #ffffff;   
-    color: #000000;   
-    padding: 2rem;   
-}   
+.stApp {  
+    background-color: #fcfcfc;  
+    color: #000000;  
+    padding: 2rem;  
+}  
   
 /* Sidebar styling */  
-[data-testid="stSidebar"] {   
-    background-color: #e7e7e9;   
-    color: #ffffff;   
-}   
+[data-testid="stSidebar"] {  
+    background-color: #0a1e2e;  
+    color: #ffffff;  
+}  
+  
+/* Ensure all text within the sidebar is white */  
+[data-testid="stSidebar"] * {  
+    color: #ffffff !important;  
+}  
   
 /* Remove the sidebar image and add a title */  
-[data-testid="stSidebarNav"] {   
-    padding-top: 20px;   
-    background-position: 20px 10px;   
-    background-size: 30px;   
-}   
+[data-testid="stSidebarNav"] {  
+    background-image: url(https://github.com/cjackson202/IceCreamBot/blob/main/bot/images/logo.png?raw=true);  
+    background-repeat: no-repeat;  
+    padding-top: 100px;  
+    background-position: center 0px;  
+    background-size: 320px;  
+}  
   
-[data-testid="stSidebarNav"]::before {   
+[data-testid="stSidebarNav"]::before {  
     content: "Navigation"; /* Add your desired title here */  
-    display: block;   
-    margin: 0 auto;   
-    margin-top: 20px; 
+    display: block;  
+    margin: 0 auto;  
+    margin-top: 20px;  
     font-family: Georgia, 'Times New Roman', Times, serif;  
-    font-size: 20px;   
-    font-weight: bold;   
-    text-align: center;   
-    color: black;   
-}   
+    font-size: 20px;  
+    font-weight: bold;  
+    text-align: center;  
+    color: white;  
+}  
   
 /* Success message styling */  
-.success-message {   
-    text-align: center;   
-    margin: 20px 0;   
-}   
+.success-message {  
+    text-align: center;  
+    margin: 20px 0;  
+}  
   
 /* Main title styling */  
-h1 {   
-    color: #000400;   
-    text-align: center;   
+h1 {  
+    color: #000400;  
+    text-align: center;  
     margin-bottom: 20px;  
-    font-family: Georgia, 'Times New Roman', Times, serif; 
-    font-size: 50px;   
-}   
+    font-family: Georgia, 'Times New Roman', Times, serif;  
+    font-size: 50px;  
+}  
   
 /* Select box styling */  
-.css-2trqyj {   
-    font-size: 18px;   
-}   
+.css-2trqyj {  
+    font-size: 18px;  
+}  
   
 /* Number input styling */  
-.css-1siy2j7 {   
-    font-size: 18px;   
-}   
+.css-1siy2j7 {  
+    font-size: 18px;  
+}  
   
 /* Radio button styling */  
-.css-1awt6go {   
-    font-size: 18px;   
-}   
+.css-1awt6go {  
+    font-size: 18px;  
+}  
   
 /* DataFrame styling */  
-.css-1l269bu {   
-    margin-top: 20px;   
-}   
+.css-1l269bu {  
+    margin-top: 20px;  
+}  
   
 /* Spinner styling */  
-.css-1f6lu8k {   
-    margin-top: 20px;   
-    text-align: center;   
+.css-1f6lu8k {  
+    margin-top: 20px;  
+    text-align: center;  
+}  
+  
+/* Modify the streamlit menu in top right corner */  
+.st-emotion-cache-w3nhqi.ef3psqc5 {  
+    color: black !important;  
+}  
+  
+.st-emotion-cache-1wbqy5l.e17vllj40 {  
+    color: black !important;  
+}  
+  
+.st-emotion-cache-jdyw56.en6cib60 {  
+    color: black !important;  
 }  
 
-/*Modify the streamlit native three dots in top right corner*/
-.st-emotion-cache-w3nhqi.ef3psqc5 {  
-    color: red !important;  
+.st-emotion-cache-cgqxho.ef3psqc6 {  
+    color: black !important;  
+}  
+
+
+/* Pages Menu styling */  
+.st-emotion-cache-1rtdyuf.eczjsme13 {  
+    color: #ffffff; /* This sets the text color to white */  
+}  
+  
+.st-emotion-cache-6tkfeg.eczjsme13 {  
+    color: #ffffff !important;  
+}  
+  
+.css-10trblm, .css-1r7vkyz, .css-2trqyj {  
+    color: black;  
 }  

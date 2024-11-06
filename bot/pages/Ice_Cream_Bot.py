@@ -7,6 +7,7 @@ import requests
 from azure.search.documents import SearchClient
 from azure.core.credentials import AzureKeyCredential
 from openai import AzureOpenAI
+import base64
 
 load_dotenv()
 
@@ -85,11 +86,18 @@ def clear_session(messages):
     st.cache_data.clear()  
     messages.clear()  
     return messages  
+
+# Function to get the image as a base64 string  
+def get_base64_of_bin_file(bin_file):  
+    with open(bin_file, 'rb') as f:  
+        data = f.read()  
+    return base64.b64encode(data).decode()  
   
 def main():  
+    st.write("<br>", unsafe_allow_html=True)  
     #st.write("m_strVaultURL:" + m_strVaultURL)
-    st.title("Demo: Ice Cream Bot")  
-    st.sidebar.title("Azure OpenAI Parameters")
+    # st.title("Ice Cream Bot")  
+    # st.sidebar.title("Azure OpenAI Parameters")
     # st.write("-"*50)
     # clear_chat_placeholder = st.empty()  
       
@@ -120,7 +128,24 @@ def main():
   
 if __name__ == '__main__':  
     global_page_style2()  
-    col1, col2, col3, col4, col5, col6 = st.columns(6)  
-    with col3:  
-        st.image('./images/logo.png', use_column_width=False)  
+    # Path to the image  
+    image_path = "./images/ice_cream_logo2.png"  
+    # Get the base64 string of the image  
+    img_base64 = get_base64_of_bin_file(image_path)  
+    
+    # Generate the HTML content with the local image and the title  
+    html_content = f'''  
+    <div style="display: flex; justify-content: center; align-items: center;">  
+        <div style="flex-shrink: 0;">  
+            <img src="data:image/png;base64,{img_base64}" width="150">  
+        </div>  
+        <div style="margin-left: 20px;">  
+            <h1 style="margin: 0;">Ice Cream Bot</h1>  
+        </div>  
+    </div>  
+    '''  
+    
+    # Display the image and title using st.markdown  
+    st.markdown(html_content, unsafe_allow_html=True)  
+    st.sidebar.title("Azure OpenAI Parameters")
     main()  
